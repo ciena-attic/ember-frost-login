@@ -10,7 +10,6 @@
 [![Travis][ci-img]][ci-url] [![Coveralls][cov-img]][cov-url] [![NPM][npm-img]][npm-url]
 
 # ember-frost-login
-the drop-down select widget to rule them all
 
  * [Installation](#Installation)
  * [API](#API)
