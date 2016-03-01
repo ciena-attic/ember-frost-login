@@ -2,7 +2,7 @@
   "name": "ember-frost-login",
   "version": "0.0.2",
   "description": "The default blueprint for ember-cli addons.",
-  "frostGuideDirectory": "design-patterns/login-logout",
+  "frostGuideDirectory": "ui-components/input-controls/login",
   "directories": {
     "doc": "doc",
     "test": "tests"
