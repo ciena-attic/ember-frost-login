@@ -1,0 +1,20 @@
+{{#frost-login brand='blueplanet' logo='' on-enter='submitLogin' as |section|}}
+  {{#if section.form}}
+  {{frost-bunsen-form
+    model=bunsenModel
+    onChange=(action "loginFormValueChanged")
+    onValidation=(action 'onValidation')
+    value=bunsenValue
+  }}
+  {{/if}}
+  {{#if section.actions}}
+    {{frost-button
+      class="login"
+      disabled=(not valid)
+      on-click=(action "submitLogin")
+      priority="none"
+      size="medium"
+      text="Login"
+    }}
+  {{/if}}
+{{/frost-login}}

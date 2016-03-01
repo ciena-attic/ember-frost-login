@@ -1,2 +1,47 @@
-ember-frost-login component
-{{yield}}
+<div class="panel">
+  <div class="separator-vertical">
+    {{!frost-icon path=(concat 'branding/' brand '-strip')}}
+  </div>
+  {{#if logo}}
+    {{!frost-icon class="logo" path=logo}}
+  {{/if}}
+  {{#if _product}}
+    <div class="product">
+      {{_product}}
+      <span class="version">{{version}}</span>
+    </div>
+  {{/if}}
+
+  {{#if hasBlock}}
+    {{yield section.form}}
+    <div class="footer">
+      {{yield section.actions}}
+    </div>
+  {{else}}
+    {{frost-bunsen-form
+      model=bunsenModel
+      onChange=(action "loginFormValueChanged")
+      onValidation=(action 'onValidation')
+      view=bunsenView
+    }}
+    <div class="submission-error">{{error}}</div>
+    <div class="footer">
+      {{frost-button
+        class="login"
+        disabled=(not valid)
+        on-click=(action "submitLogin")
+        priority="none"
+        size="medium"
+        text="Log in"
+      }}
+    </div>
+  {{/if}}
+
+</div>
+<div class="disclaimer">
+    WARNING!  This computer system and network are PRIVATE and PROPRIETARY of Ciena and may
+    only be accessed by authorized users.  Unauthorized use of this computer system or network is strictly
+    prohibited and may be subject to criminal prosecution, employee discipline up to and including
+    discharge, or the termination of the vendor/service contracts.  The owner, or its agents, may monitor
+    any activity or communication on the computer system or network.
+</div>
