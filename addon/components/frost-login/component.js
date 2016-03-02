@@ -1,15 +1,15 @@
 import Ember from 'ember'
 import layout from '../../templates/components/frost-login'
-import {default as bunsenModel} from './model'
-import {default as bunsenView} from './view'
+import {default as loginModel} from './model'
+import {default as loginView} from './view'
 
 export default Ember.Component.extend({
   layout: layout,
   classNames: ['frost-login'],
 
   brand: 'blueplanet',
-  bunsenModel,
-  bunsenView,
+  loginModel,
+  loginView,
   valid: false,
 
   section: {
