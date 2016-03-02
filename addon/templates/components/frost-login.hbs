@@ -1,9 +1,15 @@
 <div class="panel">
   <div class="separator-vertical">
-    {{!frost-icon path=(concat 'branding/' brand '-strip')}}
+    {{#if separator}}
+      {{frost-icon icon=separator}}
+    {{else}}
+      {{frost-icon icon='app/company-strip'}}
+    {{/if}}
   </div>
   {{#if logo}}
-    {{!frost-icon class="logo" path=logo}}
+    {{frost-icon class="logo" icon=logo}}
+  {{else}}
+    {{frost-icon class="logo" icon='app/company'}}
   {{/if}}
   {{#if _product}}
     <div class="product">

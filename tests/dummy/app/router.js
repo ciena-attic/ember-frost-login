@@ -7,8 +7,8 @@ var Router = Ember.Router.extend({
 
 Router.map(function () {
   this.route('demo', { path: '/' })
-  this.route('blue-planet')
-  this.route('blue-planet-custom')
+  this.route('default')
+  this.route('company-custom')
 })
 
 export default Router
