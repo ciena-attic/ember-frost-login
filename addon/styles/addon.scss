@@ -18,7 +18,7 @@ $frost-login-padding: 40px;
   box-shadow: 0 4px 35px 0 rgba($frost-color-grey-1, 0.15);
 }
 
-.frost-login .separator-vertical {
+.frost-login .branding-strip {
   position: absolute;
   top: 0;
   left: 0;
@@ -53,10 +53,6 @@ $frost-login-padding: 40px;
     input {
       width: 100%;
     }
-
-    .left-label .required {
-      display: none;
-    }
   }
 }
 
@@ -72,13 +68,14 @@ $frost-login-padding: 40px;
     justify-content: flex-end;
 }
 
-.frost-login .frost-button.login {
-  width: 180px;
-  height: 50px;
-  border-radius: 0;
-  color: $frost-color-white;
-  text-decoration: none;
-}
+// Use standard button?
+//.frost-login .frost-button.login {
+//  width: 180px;
+//  height: 50px;
+//  border-radius: 0;
+//  color: $frost-color-white;
+//  text-decoration: none;
+//}
 
 .frost-login .disclaimer {
   width: $frost-login-width;

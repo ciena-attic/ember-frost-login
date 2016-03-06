@@ -1,7 +1,7 @@
 <div class="panel">
-  <div class="separator-vertical">
-    {{#if separator}}
-      {{frost-icon icon=separator}}
+  <div class='branding-strip'>
+    {{#if branding-strip}}
+      {{frost-icon icon=branding-strip}}
     {{else}}
       {{frost-icon icon='app/company-strip'}}
     {{/if}}
@@ -25,18 +25,17 @@
     </div>
   {{else}}
     {{frost-bunsen-form
-      model=bunsenModel
+      model=loginFormModel
       onChange=(action "loginFormValueChanged")
       onValidation=(action 'onValidation')
-      view=bunsenView
+      view=loginFormView
     }}
     <div class="submission-error">{{error}}</div>
     <div class="footer">
       {{frost-button
-        class="login"
         disabled=(not valid)
         on-click=(action "submitLogin")
-        priority="none"
+        priority="primary"
         size="medium"
         text="Log in"
       }}
@@ -45,9 +44,5 @@
 
 </div>
 <div class="disclaimer">
-    WARNING!  This computer system and network are PRIVATE and PROPRIETARY of Ciena and may
-    only be accessed by authorized users.  Unauthorized use of this computer system or network is strictly
-    prohibited and may be subject to criminal prosecution, employee discipline up to and including
-    discharge, or the termination of the vendor/service contracts.  The owner, or its agents, may monitor
-    any activity or communication on the computer system or network.
+    WARNING! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultrices nisl vitae imperdiet vulputate. Vestibulum eu massa sagittis augue aliquet blandit. Aliquam blandit ipsum non felis tristique, eget mattis augue cursus. Morbi nisl diam, tincidunt a porta sed, porttitor ut quam.
 </div>

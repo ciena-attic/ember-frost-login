@@ -1,15 +1,14 @@
 import Ember from 'ember'
 import layout from '../../templates/components/frost-login'
-import {default as loginModel} from './model'
-import {default as loginView} from './view'
+import {default as loginFormModel} from './form-model'
+import {default as loginFormView} from './form-view'
 
 export default Ember.Component.extend({
   layout: layout,
   classNames: ['frost-login'],
 
-  brand: 'blueplanet',
-  loginModel,
-  loginView,
+  loginFormModel,
+  loginFormView,
   valid: false,
 
   section: {
@@ -48,7 +47,7 @@ export default Ember.Component.extend({
 
   actions: {
     loginFormValueChanged (value) {
-      this.set('bunsenValue', value)
+      this.set('loginFormValue', value)
     },
 
     onValidation (e) {
@@ -56,9 +55,9 @@ export default Ember.Component.extend({
     },
 
     submitLogin: function () {
-      let data = this.get('bunsenValue')
+      let data = this.get('loginFormValue')
       this.sendAction('on-submit', data)
-      this.set('bunsenValue', {})
+      this.set('loginFormValue', {})
     }
   }
 })

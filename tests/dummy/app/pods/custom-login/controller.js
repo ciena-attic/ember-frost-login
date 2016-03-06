@@ -1,13 +1,13 @@
 import Ember from 'ember'
-import {default as bunsenModel} from './model'
+import {default as loginFormModel} from './model'
 
 export default Ember.Controller.extend({
-  bunsenModel,
+  loginFormModel,
   valid: false,
 
   actions: {
     loginFormValueChanged (value) {
-      this.set('bunsenValue', value)
+      this.set('loginFormValue', value)
     },
 
     onValidation (e) {
@@ -15,15 +15,15 @@ export default Ember.Controller.extend({
     },
 
     submitLogin: function () {
-      let data = this.get('bunsenValue')
+      let data = this.get('loginFormValue')
       this.notifications.addNotification({
         message: 'server: ' + data.server + ', username: ' + data.username +
-          ', password: ' + data.password + ', rememberme: ' + data.rememberme,
+          ', password: ' + data.password + ', rememberme: ' + data.rememberMe,
         type: 'success',
         autoClear: true,
         clearDuration: 2000
       })
-      this.set('bunsenValue', {})
+      this.set('loginFormValue', {})
     }
   }
 })
