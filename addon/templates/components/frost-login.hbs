@@ -1,2 +1,48 @@
-ember-frost-login component
-{{yield}}
+<div class="panel">
+  <div class='branding-strip'>
+    {{#if brandingStrip}}
+      {{frost-icon icon=brandingStrip}}
+    {{else}}
+      {{frost-icon icon='app/company-strip'}}
+    {{/if}}
+  </div>
+  {{#if logo}}
+    {{frost-icon class="logo" icon=logo}}
+  {{else}}
+    {{frost-icon class="logo" icon='app/company'}}
+  {{/if}}
+  {{#if _product}}
+    <div class="product">
+      {{_product}}
+      <span class="version">{{version}}</span>
+    </div>
+  {{/if}}
+
+  {{#if hasBlock}}
+    {{yield section.form}}
+    <div class="footer">
+      {{yield section.actions}}
+    </div>
+  {{else}}
+    {{frost-bunsen-form
+      model=loginFormModel
+      onChange=(action "loginFormValueChanged")
+      onValidation=(action 'onValidation')
+      view=loginFormView
+    }}
+    <div class="submission-error">{{error}}</div>
+    <div class="footer">
+      {{frost-button
+        disabled=(not valid)
+        on-click=(action "submitLogin")
+        priority="primary"
+        size="medium"
+        text="Log in"
+      }}
+    </div>
+  {{/if}}
+
+</div>
+<div class="disclaimer">
+    WARNING! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultrices nisl vitae imperdiet vulputate. Vestibulum eu massa sagittis augue aliquet blandit. Aliquam blandit ipsum non felis tristique, eget mattis augue cursus. Morbi nisl diam, tincidunt a porta sed, porttitor ut quam.
+</div>
