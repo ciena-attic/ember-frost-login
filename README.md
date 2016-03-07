@@ -21,7 +21,7 @@ Coming soon
 
 ## Examples
 ```handlebars
-{{#frost-login logo='myLogo' branding-strip='myBrand' on-enter='submitLogin' as |section|}}
+{{#frost-login logo='myLogo' brandingStrip='myBrand' on-enter='submitLogin' as |section|}}
   {{#if section.form}}
   {{frost-bunsen-form
     model=loginFormModel
