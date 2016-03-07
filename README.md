@@ -11,11 +11,6 @@
 
 # ember-frost-login
 
- * [Installation](#Installation)
- * [API](#API)
- * [Examples](#Examples)
- * [Contributing](#Contributing)
-
 ## Installation
 ```
 ember install ember-frost-login
