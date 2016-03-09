@@ -25,7 +25,7 @@ ember install ember-frost-login
 | Attribute | Type | Value | Description |
 | --------- | ---- | ----- | ----------- |
 | `logo` | `string` | `<icon-name>` | the name of a logo svg you will use |
-| `brandingString` | `string` | `<icon-name>` | the name of a branding strip svg you will use |
+| `brandingStrip` | `string` | `<icon-name>` | the name of a branding strip svg you will use |
 | `on-enter` | `string` | `<action-name>` | triggers associated action when Enter key is pressed |
 
 
