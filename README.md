@@ -11,13 +11,23 @@
 
 # ember-frost-login
 
+* [Installation](#installation)
+* [API](#api)
+* [Examples](#examples)
+* [Contributing](#development)
+
 ## Installation
 ```
 ember install ember-frost-login
 ```
 
 ## API
-Coming soon
+| Attribute | Type | Value | Description |
+| --------- | ---- | ----- | ----------- |
+| `logo` | `string` | `<icon-name>` | the name of a logo svg you will use |
+| `brandingString` | `string` | `<icon-name>` | the name of a branding strip svg you will use |
+| `on-enter` | `string` | `<action-name>` | triggers associated action when Enter key is pressed |
+
 
 ## Examples
 ```handlebars
