@@ -11,6 +11,6 @@ module.exports = [
     id: 'custom-login',
     alias: 'Custom Login',
     type: 'category',
-    route: 'custom-login',
+    route: 'custom-login'
   }
 ]
