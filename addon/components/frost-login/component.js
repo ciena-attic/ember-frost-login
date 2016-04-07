@@ -3,7 +3,9 @@ import layout from '../../templates/components/frost-login'
 import {default as loginFormModel} from './form-model'
 import {default as loginFormView} from './form-view'
 
-export default Ember.Component.extend({
+const {Component, computed} = Ember
+
+export default Component.extend({
   layout: layout,
   classNames: ['frost-login'],
 
@@ -15,9 +17,9 @@ export default Ember.Component.extend({
     form: {form: true},
     actions: {actions: true}
   },
-  hasError: Ember.computed.notEmpty('error'),
+  hasError: computed.notEmpty('error'),
 
-  _product: Ember.computed('product', function () {
+  _product: computed('product', function () {
     if (this.get('product')) {
       return this.get('product').toUpperCase()
     }
@@ -26,7 +28,7 @@ export default Ember.Component.extend({
 
   didInsertElement () {
     // Fetch a list of all login input fields
-    let loginInputFields = this.$('.login input')
+    let loginInputFields = this.$(".frost-bunsen-form input")
 
     // Auto-focus the first empty login input field
     loginInputFields.each(function () {
@@ -40,7 +42,7 @@ export default Ember.Component.extend({
     loginInputFields.keypress((e) => {
       if (e.which === 13) {
         this.send('submitLogin')      // send an action to the local submitLogin handler
-        this.sendAction('on-enter')  // send an action to custom forms
+        this.sendAction('onEnter')  // send an action to custom forms
       }
     })
   },
@@ -50,13 +52,13 @@ export default Ember.Component.extend({
       this.set('loginFormValue', value)
     },
 
-    onValidation (e) {
+    onValidationHandler (e) {
       this.set('valid', e.valid)
     },
 
     submitLogin: function () {
       let data = this.get('loginFormValue')
-      this.sendAction('on-submit', data)
+      this.sendAction('onSubmit', data)
       this.set('loginFormValue', {})
     }
   }
