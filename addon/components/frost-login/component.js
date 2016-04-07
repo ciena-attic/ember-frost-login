@@ -28,7 +28,7 @@ export default Component.extend({
 
   didInsertElement () {
     // Fetch a list of all login input fields
-    let loginInputFields = this.$(".frost-bunsen-form input")
+    let loginInputFields = this.$('.frost-bunsen-form input')
 
     // Auto-focus the first empty login input field
     loginInputFields.each(function () {

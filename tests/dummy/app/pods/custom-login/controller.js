@@ -19,7 +19,7 @@ export default Controller.extend({
     submitLogin () {
       let data = this.get('loginFormValue')
       this.notifications.addNotification({
-        message:  'username: ' + data.username +
+        message: 'username: ' + data.username +
           ', password: ' + data.password + ', rememberme: ' + data.rememberMe +
           ', server: ' + data.server,
         type: 'success',
