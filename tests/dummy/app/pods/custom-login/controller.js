@@ -1,7 +1,9 @@
 import Ember from 'ember'
 import {default as loginFormModel} from './model'
 
-export default Ember.Controller.extend({
+const {Controller} = Ember
+
+export default Controller.extend({
   loginFormModel,
   valid: false,
 
@@ -10,15 +12,16 @@ export default Ember.Controller.extend({
       this.set('loginFormValue', value)
     },
 
-    onValidation (e) {
+    onValidationHandler (e) {
       this.set('valid', e.valid)
     },
 
-    submitLogin: function () {
+    submitLogin () {
       let data = this.get('loginFormValue')
       this.notifications.addNotification({
-        message: 'server: ' + data.server + ', username: ' + data.username +
-          ', password: ' + data.password + ', rememberme: ' + data.rememberMe,
+        message: 'username: ' + data.username +
+          ', password: ' + data.password + ', rememberme: ' + data.rememberMe +
+          ', server: ' + data.server,
         type: 'success',
         autoClear: true,
         clearDuration: 2000

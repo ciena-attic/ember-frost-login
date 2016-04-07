@@ -1,19 +1,19 @@
-{{#frost-login logo='' brandingStrip='' on-enter='submitLogin' as |section|}}
+{{#frost-login logo='' brandingStrip='' onEnter='submitLogin' as |section|}}
   {{#if section.form}}
   {{frost-bunsen-form
     model=loginFormModel
-    on-change=(action "loginFormValueChanged")
-    on-validation=(action 'onValidation')
+    onChange=(action 'loginFormValueChanged')
+    onValidation=(action 'onValidationHandler')
     value=loginFormValue
   }}
   {{/if}}
   {{#if section.actions}}
     {{frost-button
       disabled=(not valid)
-      on-click=(action "submitLogin")
-      priority="primary"
-      size="medium"
-      text="Login"
+      onClick=(action 'submitLogin')
+      priority='primary'
+      size='medium'
+      text='Login'
     }}
   {{/if}}
 {{/frost-login}}

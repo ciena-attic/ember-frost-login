@@ -26,15 +26,15 @@
   {{else}}
     {{frost-bunsen-form
       model=loginFormModel
-      on-change=(action "loginFormValueChanged")
-      on-validation=(action 'onValidation')
+      onChange=(action "loginFormValueChanged")
+      onValidation=(action 'onValidationHandler')
       view=loginFormView
     }}
     <div class="submission-error">{{error}}</div>
     <div class="footer">
       {{frost-button
         disabled=(not valid)
-        on-click=(action "submitLogin")
+        onClick=(action "submitLogin")
         priority="primary"
         size="medium"
         text="Log in"
