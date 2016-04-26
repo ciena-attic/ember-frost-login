@@ -1,5 +1,5 @@
-{{#frost-login logo='' brandingStrip='' onEnter='submitLogin' as |section|}}
-  {{#if section.form}}
+{{frost-login onSubmit='submitLogin' }}
+  {{!-- {{#if section.form}}
   {{frost-bunsen-form
     model=loginFormModel
     onChange=(action 'loginFormValueChanged')
@@ -15,5 +15,5 @@
       size='medium'
       text='Login'
     }}
-  {{/if}}
-{{/frost-login}}
+  {{/if}} --}}
+{{!-- {{/frost-login}} --}}
