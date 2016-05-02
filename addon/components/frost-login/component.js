@@ -53,7 +53,7 @@ export default Component.extend({
     },
 
     onValidationHandler (e) {
-      this.set('valid', e.valid)
+      this.set('valid', e.errors.length === 0)
     },
 
     submitLogin: function () {
