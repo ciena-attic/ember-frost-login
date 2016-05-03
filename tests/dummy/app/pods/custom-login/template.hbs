@@ -1,4 +1,8 @@
-{{frost-login onSubmit='submitLogin' }}
+{{frost-login
+  brandingStrip='app/company-strip'
+  logo='app/company'
+  onSubmit='submitLogin'
+}}
   {{!-- {{#if section.form}}
   {{frost-bunsen-form
     model=loginFormModel

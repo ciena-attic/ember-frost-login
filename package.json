@@ -17,7 +17,12 @@
   "engines": {
     "node": ">= 5.0.0"
   },
-  "author": "",
+  "author": "Roxanne Panthaky (https://github.com/rox163)",
+  "contributors": [
+    "Gosia Hyndman (https://github.com/vesper2000)",
+    "Eric White (https://github.com/EWhite613)",
+    "Matthew Dahl (https://github.com/sandersky)"
+  ],
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.2.0",
@@ -44,7 +49,7 @@
     "ember-resolver": "^2.0.3",
     "ember-truth-helpers": "^1.2.0",
     "ember-try": "^0.2.0",
-    "eslint": "2.8.0",
+    "eslint": "2.9.0",
     "eslint-config-frost-standard": "^2.0.0",
     "frost-guide-custom-routing": "0.0.4",
     "loader.js": "^4.0.0"
